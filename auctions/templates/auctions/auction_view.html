@@ -20,7 +20,7 @@
                     <p id="initialBid" class="lastBid{{auction.id}} product-description product" value="{{auction.starting_bid}}">Initial Bid: {{auction.starting_bid}}</p>
                 {% endif %}
             {% else %}
-                <p id="initialBid" class="lastBid{{auction.id}} product-description product" value="{{auction.starting_bid}}">Close in: {{auction.starting_bid}}</p>
+                <p id="initialBid" class="lastBid{{auction.id}} product-description product" value="{{auction.starting_bid}}">Close in: {{auction.last_bid}}</p>
                 {% if auction.last_bid.user.username == request.user.username %}
                     <p class="product-description product">You win this listing</p>
                 {% else %}
